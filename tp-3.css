@@ -1,0 +1,42 @@
+#contenedor h1 {
+    text-align: center;
+}
+
+body p {
+    font-family: serif;
+}
+
+body #primer-parrafo {
+    background-color: #cee;
+}
+
+#primer-parrafo em {
+    color: #933;
+}
+
+body p.novelas a {
+    outline: 1px solid #333;
+}
+
+a {
+    outline: 1px solid #333;
+}
+
+body p.fuente.parrafo {
+    opacity: 100% !important;
+}
+
+p:not(#primer-parrafo) {
+    background-color: rgba(190, 120, 240, 0.6);
+}
+
+/* ── Bonus Track ─────────────────────────────────── */
+
+body p.fuente.parrafo {
+    color: #000 !important;
+}
+
+.complicado {
+    font-weight: bold;
+    color: #c62 !important;
+}
