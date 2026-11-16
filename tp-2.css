@@ -1,0 +1,60 @@
+/*1) Cambiar el color de fondo y de fuente*/
+body{
+    background-color: #222;
+    color: #ee6;
+}
+
+/*2) Poner el titulo principal al centro*/
+h1{
+    text-align: center;
+}
+
+/*3) Usar sans-serif en todos los parrafos*/
+p{
+    font-family: sans-serif;
+}
+
+/*4) Poner el mismo color a todos los titulos del documento*/
+h1, h2, h3{
+    color: #eee;
+}
+
+/*5) Agregar un borde blanco en la parte inferior de la etiqueta strong*/
+strong{
+    text-decoration: underline white;
+}
+
+/*6) Cambiar el color de fondo a gris y ponerla en negrita*/
+.the-force{
+    background-color: #444;
+    font-weight: bold;
+}
+
+/*7) Asignar un color para el lado oscuro y otro para el lado luminoso*/
+.the-force.light-side{
+    color: #66f;
+}
+
+.the-force.dark-side{
+    color: #f33;
+}
+
+/*8) Agregar la regla list-style-type: circle; a los elementos del listado con ID og-trilogy.*/
+#og-trilogy{
+    list-style-type: circle;
+}
+
+/*9) Agregar padding a la segunda lista de peliculas*/
+.movies-list2{
+    padding-left: 5%;
+}
+
+/*10) Agregar margin-top al último elemento del tercer listado de películas*/
+.movies-list3 li:last-child{
+    margin-top: 10px;
+}
+
+//Título cambia de color cuando paso el cursor del mouse por arriba
+h1:hover {
+    color: #ff0;
+}
