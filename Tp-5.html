@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Versiones con Git</title>
+    <!-- Bootstrap CSS: hoja de estilos principal de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons: librería de íconos SVG de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         CONSIGNA 3 - COMPONENTE: NAVBAR
+         "navbar" crea la barra de navegación.
+         "navbar-expand-lg" hace que se expanda en pantallas grandes.
+         "navbar-dark bg-dark" aplica tema oscuro con fondo negro.
+         "sticky-top" la fija en la parte superior al hacer scroll.
+    ====================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <!-- "container" centra el contenido de la navbar con márgenes laterales -->
+        <div class="container">
+            <!-- "navbar-brand" es el logo/nombre principal de la navbar -->
+            <a class="navbar-brand" href="#">
+                <!-- Ícono de git de Bootstrap Icons -->
+                <i class="bi bi-git me-2"></i>Git Guide
+            </a>
+
+            <!-- "navbar-toggler" es el botón hamburguesa que aparece en móviles -->
+            <!-- "data-bs-toggle" y "data-bs-target" conectan el botón con el menú colapsable -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- "collapse navbar-collapse" oculta el menú en pantallas chicas -->
+            <!-- El id "navbarMenu" debe coincidir con el data-bs-target del botón -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <!-- "navbar-nav ms-auto" alinea los links a la derecha (ms = margin-start: auto) -->
+                <ul class="navbar-nav ms-auto">
+                    <!-- "nav-item" y "nav-link" son los elementos del menú -->
+                    <li class="nav-item"><a class="nav-link" href="#comandos">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comparacion">Comparación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================
+         CONSIGNA 3 - COMPONENTE: CONTAINER
+         "container" limita el ancho del contenido y agrega
+         márgenes automáticos a izquierda y derecha.
+         "my-4" agrega margen vertical (top y bottom) de nivel 4.
+    ====================================================== -->
+    <div class="container my-4">
+
+        <!-- =====================================================
+             CONSIGNA 2 - CENTRAR EL TÍTULO H1
+             "text-center" centra el texto horizontalmente.
+             "mb-3" agrega margen inferior (margin-bottom) nivel 3.
+             "display-4" aumenta el tamaño del título (clase tipográfica de Bootstrap).
+        ====================================================== -->
+        <h1 class="text-center mb-3 display-4">Control de Versiones con Git</h1>
+
+        <!-- =====================================================
+             CONSIGNA 2 - AUMENTAR TAMAÑO DEL PRIMER PÁRRAFO
+             "lead" es la clase de Bootstrap para hacer un párrafo
+             más grande y con mayor peso visual, ideal para
+             introducción o bajada de título.
+             "text-center" lo centra para que acompañe al h1.
+             "mb-4" agrega margen inferior nivel 4.
+        ====================================================== -->
+        <p class="lead text-center mb-4">
+            <strong>Git</strong> es un sistema de control de versiones distribuido, ampliamente utilizado en el desarrollo de
+            software moderno. Fue creado para gestionar proyectos de forma rápida, eficiente y colaborativa.
+        </p>
+
+        <!-- =====================================================
+             CONSIGNA 4 - BONUS TRACK: ALERT (Alerta)
+             "alert" es el componente base de alertas de Bootstrap.
+             "alert-info" le da el color azul informativo.
+             "alert-dismissible" permite que el usuario la cierre.
+             "fade show" activa la animación de desvanecimiento al cerrar.
+             El botón con "data-bs-dismiss='alert'" conecta el cierre.
+        ====================================================== -->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <strong>¡Bienvenido!</strong> Esta página es una guía introductoria sobre Git y sus comandos más utilizados.
+            <!-- "btn-close" es el botón X para cerrar la alerta -->
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- =====================================================
+             CONSIGNA 3 - COMPONENTE: CARD
+             "card" crea un contenedor con bordes, padding y sombra sutil.
+             "mb-5" agrega margen inferior nivel 5 para separar secciones.
+             "shadow-sm" agrega una sombra suave a la card completa.
+        ====================================================== -->
+        <div class="card mb-5 shadow-sm" id="comandos">
+            <!-- "card-header bg-dark text-white" estilos del encabezado de la card -->
+            <div class="card-header bg-dark text-white">
+                <h2 class="mb-0 h5">
+                    <i class="bi bi-terminal-fill me-2"></i>Comandos más populares de Git
+                </h2>
+            </div>
+
+            <!-- "card-body" es el área de contenido principal de la card -->
+            <div class="card-body">
+
+                <!-- =====================================================
+                     CONSIGNA 2 - AGREGAR MÁRGENES Y SOMBRA AL LISTADO
+                     "p-3" agrega padding (relleno interior) nivel 3 a todos los lados.
+                     "shadow" agrega sombra al contenedor del listado.
+                     "rounded" redondea las esquinas del contenedor.
+                     "bg-light" aplica fondo gris claro al contenedor.
+                     "mb-0" elimina el margen inferior del ul.
+
+                     CONSIGNA 3 - COMPONENTE: LIST GROUP
+                     "list-group" transforma el ul en un listado estilizado.
+                     "list-group-flush" elimina los bordes exteriores del grupo
+                     para que se integre mejor dentro de la card.
+                ====================================================== -->
+                <div class="p-3 shadow rounded bg-light">
+                    <ul class="list-group list-group-flush mb-0">
+                        <!-- "list-group-item" es cada fila del listado estilizado -->
+                        <!-- "d-flex align-items-start" alinea el ícono y el texto en fila -->
+                        <li class="list-group-item d-flex align-items-start">
+                            <!-- "badge bg-dark me-3 mt-1" crea una etiqueta negra como indicador visual -->
+                            <span class="badge bg-dark me-3 mt-1">01</span>
+                            <div>
+                                <code>git init</code> — Inicializa un nuevo repositorio Git en el directorio actual. Este comando crea un repositorio vacío.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">02</span>
+                            <div>
+                                <code>git clone [url]</code> — Clona un repositorio remoto en tu máquina local. Ejemplo: <code>git clone https://github.com/usuario/repositorio.git</code>.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">03</span>
+                            <div>
+                                <code>git status</code> — Muestra el estado del repositorio: archivos modificados, nuevos archivos no rastreados, cambios preparados para el commit, etc.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">04</span>
+                            <div>
+                                <code>git add [archivo]</code> — Agrega un archivo o cambios específicos al área de preparación (staging area) para el commit.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">05</span>
+                            <div>
+                                <code>git commit -m "[mensaje]"</code> — Crea un commit con los archivos añadidos al área de preparación, agregando un mensaje descriptivo.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">06</span>
+                            <div>
+                                <code>git push</code> — Sube los cambios locales al repositorio remoto. Generalmente se usa después de un commit.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">07</span>
+                            <div>
+                                <code>git pull</code> — Obtiene y combina los cambios del repositorio remoto al local. Equivalente a <code>git fetch</code> seguido de <code>git merge</code>.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start">
+                            <span class="badge bg-dark me-3 mt-1">08</span>
+                            <div>
+                                <code>git checkout [rama]</code> — Cambia a una rama específica. Si no existe, se puede crear con <code>git checkout -b [rama]</code>.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- /card-body -->
+        </div><!-- /card -->
+
+
+        <!-- =====================================================
+             CONSIGNA 3 - COMPONENTE: ACCORDION
+             "accordion" organiza secciones que se abren de a una.
+             "mb-5" separa el acordeón de la sección siguiente.
+             Cada "accordion-item" es un panel expandible.
+        ====================================================== -->
+        <h2 class="mb-3" id="comparacion">
+            <i class="bi bi-table me-2"></i>Comparación con otros sistemas
+        </h2>
+
+        <!-- =====================================================
+             CONSIGNA 2 - CAMBIAR ESTILO Y COLOR DE LA TABLA
+             "table" aplica el estilo base de Bootstrap a la tabla.
+             "table-striped" alterna el fondo de filas (gris / blanco).
+             "table-hover" resalta la fila al pasar el mouse.
+             "table-bordered" agrega bordes a todas las celdas.
+             "table-dark" aplica el tema oscuro a la tabla completa.
+             "caption-top" ubica el caption arriba de la tabla.
+             "shadow-sm" agrega sombra suave a la tabla.
+             "rounded" redondea las esquinas (funciona con overflow-hidden).
+        ====================================================== -->
+        <div class="shadow-sm rounded overflow-hidden mb-4">
+            <table class="table table-striped table-hover table-bordered table-dark mb-0">
+                <caption class="caption-top text-muted ps-1">
+                    Comparativa de sistemas de control de versiones más usados
+                </caption>
+                <thead>
+                    <tr>
+                        <!-- "text-center" centra el texto de los encabezados -->
+                        <th class="text-center">Sistema</th>
+                        <th class="text-center">Tipo</th>
+                        <th class="text-center">Popularidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- "fw-bold" (font-weight bold) resalta el nombre de Git -->
+                        <td class="fw-bold">Git</td>
+                        <td>Distribuido</td>
+                        <!-- "badge bg-success" crea la etiqueta verde de alta popularidad -->
+                        <td><span class="badge bg-success">Muy alta</span></td>
+                    </tr>
+                    <tr>
+                        <td>SVN</td>
+                        <td>Centralizado</td>
+                        <td><span class="badge bg-warning text-dark">Media</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mercurial</td>
+                        <td>Distribuido</td>
+                        <td><span class="badge bg-secondary">Baja</span></td>
+                    </tr>
+                    <tr>
+                        <td>Perforce</td>
+                        <td>Centralizado</td>
+                        <td><span class="badge bg-info text-dark">Especializado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Acordeón con información extra sobre los sistemas -->
+        <div class="accordion mb-5" id="accordionSistemas">
+            <!-- Primer ítem del acordeón -->
+            <!-- "accordion-item" define cada panel del acordeón -->
+            <div class="accordion-item">
+                <!-- "accordion-header" es el botón que muestra/oculta el panel -->
+                <h2 class="accordion-header">
+                    <!-- "accordion-button" es el botón clickeable -->
+                    <!-- "data-bs-toggle='collapse'" activa el comportamiento de colapso -->
+                    <!-- "data-bs-target" apunta al id del panel a mostrar/ocultar -->
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGit">
+                        <i class="bi bi-git me-2"></i> ¿Por qué Git domina el mercado?
+                    </button>
+                </h2>
+                <!-- "accordion-collapse collapse show" hace que este panel esté abierto por defecto -->
+                <!-- "data-bs-parent" asegura que solo un panel esté abierto a la vez -->
+                <div id="collapseGit" class="accordion-collapse collapse show" data-bs-parent="#accordionSistemas">
+                    <!-- "accordion-body" es el contenido del panel -->
+                    <div class="accordion-body">
+                        Git se volvió el estándar de la industria gracias a su arquitectura distribuida, su velocidad y su integración con plataformas como GitHub y GitLab. Cada desarrollador tiene una copia completa del historial.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo ítem del acordeón -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <!-- Sin "show": este panel comienza cerrado -->
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSVN">
+                        <i class="bi bi-diagram-3 me-2"></i> ¿Qué es SVN y cuándo usarlo?
+                    </button>
+                </h2>
+                <div id="collapseSVN" class="accordion-collapse collapse" data-bs-parent="#accordionSistemas">
+                    <div class="accordion-body">
+                        SVN (Subversion) es un sistema centralizado. Sigue siendo utilizado en entornos corporativos con flujos de trabajo lineales o donde se necesita control de acceso granular a directorios específicos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercer ítem del acordeón -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerforce">
+                        <i class="bi bi-building me-2"></i> ¿Cuándo se usa Perforce?
+                    </button>
+                </h2>
+                <div id="collapsePerforce" class="accordion-collapse collapse" data-bs-parent="#accordionSistemas">
+                    <div class="accordion-body">
+                        Perforce es utilizado principalmente en la industria de videojuegos AAA y grandes empresas que manejan repositorios con archivos binarios enormes (arte, modelos 3D, videos). Su licenciamiento es costoso.
+                    </div>
+                </div>
+            </div>
+        </div><!-- /accordion -->
+
+
+        <!-- =====================================================
+             SECCIÓN BOTONES - BONUS TRACK
+             Botones que activan componentes avanzados de Bootstrap.
+        ====================================================== -->
+        <h2 class="mb-3">Herramientas y recursos</h2>
+        <!-- "d-flex flex-wrap gap-2 mb-5" alinea los botones en fila con separación -->
+        <div class="d-flex flex-wrap gap-2 mb-5">
+
+            <!-- =====================================================
+                 CONSIGNA 4 - BONUS: COLLAPSE (Colapso)
+                 "data-bs-toggle='collapse'" activa el comportamiento.
+                 "data-bs-target" apunta al id del elemento a mostrar/ocultar.
+            ====================================================== -->
+            <button class="btn btn-outline-secondary" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseRecursos">
+                <i class="bi bi-list-ul me-1"></i> Mostrar/ocultar recursos
+            </button>
+
+            <!-- =====================================================
+                 CONSIGNA 4 - BONUS: MODAL (Ventana emergente)
+                 "data-bs-toggle='modal'" activa el comportamiento.
+                 "data-bs-target" apunta al id del modal a abrir.
+            ====================================================== -->
+            <button class="btn btn-outline-primary" type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCheatsheet">
+                <i class="bi bi-file-earmark-text me-1"></i> Ver cheatsheet
+            </button>
+
+            <!-- =====================================================
+                 CONSIGNA 4 - BONUS: TOAST (Notificación flotante)
+                 No usa data-bs-toggle porque se activa con JavaScript.
+                 El id "btnToast" se referencia en el script del final.
+            ====================================================== -->
+            <button class="btn btn-outline-success" type="button" id="btnToast">
+                <i class="bi bi-bell me-1"></i> Mostrar notificación
+            </button>
+
+        </div>
+
+        <!-- =====================================================
+             CONSIGNA 4 - BONUS: COLLAPSE - Contenido colapsable
+             "collapse" oculta el elemento por defecto.
+             Se muestra/oculta al clickear el botón con data-bs-target="#collapseRecursos".
+             "mb-4" agrega margen inferior.
+        ====================================================== -->
+        <div class="collapse mb-4" id="collapseRecursos">
+            <!-- Card dentro del collapse para mejor presentación -->
+            <div class="card card-body">
+                <h5 class="card-title"><i class="bi bi-link-45deg me-1"></i>Recursos recomendados</h5>
+                <ul class="mb-0">
+                    <li><a href="https://git-scm.com/doc" target="_blank">Documentación oficial de Git</a></li>
+                    <li><a href="https://docs.github.com" target="_blank">Documentación de GitHub</a></li>
+                    <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching (interactivo)</a></li>
+                    <li><a href="https://ohshitgit.com/es" target="_blank">Oh Shit, Git! (soluciones a errores comunes)</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             CONSIGNA 3 - COMPONENTE: CARD del formulario
+             Envuelve el formulario en una card para mejor presentación.
+        ====================================================== -->
+        <div class="card mb-5 shadow" id="formulario">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0 h5">
+                    <i class="bi bi-person-check me-2"></i>¿Ya usaste Git?
+                </h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Completá el siguiente formulario para compartir tu experiencia:</p>
+
+                <form>
+                    <!-- "mb-3" separa cada campo del formulario -->
+                    <div class="mb-3">
+                        <!-- "form-label" aplica el estilo correcto a los labels -->
+                        <label for="nombre" class="form-label">Tu nombre:</label>
+                        <!-- "form-control" aplica el estilo de Bootstrap al input de texto -->
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="experiencia" class="form-label">¿Qué usás más?</label>
+                        <!-- "form-select" aplica el estilo de Bootstrap al select -->
+                        <select id="experiencia" name="experiencia" class="form-select">
+                            <option value="git">Git</option>
+                            <option value="github">Git + GitHub</option>
+                            <option value="otro">Otro sistema</option>
+                            <option value="ninguno">Todavía no uso ninguno</option>
+                        </select>
+                    </div>
+
+                    <!-- =====================================================
+                         CONSIGNA 2 - CAMBIAR ESTILO DEL BOTÓN DE ENVÍO
+                         Cambiamos el input[type=submit] por un <button> (mejor práctica).
+                         "btn" es la clase base de todos los botones Bootstrap.
+                         "btn-success" aplica el color verde (en lugar del azul original).
+                         "btn-lg" aumenta el tamaño del botón.
+                         "w-100" hace que ocupe el ancho completo del contenedor.
+                         "mt-2" agrega margen superior nivel 2.
+                    ====================================================== -->
+                    <button type="submit" class="btn btn-success btn-lg w-100 mt-2">
+                        <i class="bi bi-send me-2"></i>Enviar respuesta
+                    </button>
+                </form>
+            </div>
+        </div><!-- /card formulario -->
+
+    </div><!-- /container -->
+
+
+    <!-- =====================================================
+         CONSIGNA 4 - BONUS: MODAL (Ventana emergente)
+         El modal se coloca fuera del container, al final del body.
+         "modal fade" oculta el modal y activa animación de entrada.
+         "modal-dialog-centered" centra el modal verticalmente.
+         "modal-dialog-scrollable" permite scroll interno si el contenido es largo.
+         "modal-lg" hace el modal más ancho.
+    ====================================================== -->
+    <div class="modal fade" id="modalCheatsheet" tabindex="-1" aria-labelledby="modalCheatsheetLabel" aria-hidden="true">
+        <!-- "modal-dialog" es el contenedor del modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <!-- "modal-content" envuelve todo el contenido del modal -->
+            <div class="modal-content">
+                <!-- "modal-header" contiene el título y el botón de cierre -->
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalCheatsheetLabel">
+                        <i class="bi bi-file-earmark-text me-2"></i>Git Cheatsheet Rápida
+                    </h5>
+                    <!-- "btn-close btn-close-white" botón X blanco para cerrar el modal -->
+                    <!-- "data-bs-dismiss='modal'" conecta el botón con el cierre del modal -->
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <!-- "modal-body" es el contenido principal del modal -->
+                <div class="modal-body">
+                    <table class="table table-sm table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descripción corta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>git init</code></td><td>Crear repositorio nuevo</td></tr>
+                            <tr><td><code>git clone [url]</code></td><td>Clonar repositorio remoto</td></tr>
+                            <tr><td><code>git add .</code></td><td>Agregar todos los cambios</td></tr>
+                            <tr><td><code>git commit -m ""</code></td><td>Guardar cambios con mensaje</td></tr>
+                            <tr><td><code>git push</code></td><td>Subir cambios al remoto</td></tr>
+                            <tr><td><code>git pull</code></td><td>Bajar y mergear cambios</td></tr>
+                            <tr><td><code>git branch</code></td><td>Ver ramas existentes</td></tr>
+                            <tr><td><code>git checkout -b</code></td><td>Crear y cambiar de rama</td></tr>
+                            <tr><td><code>git merge [rama]</code></td><td>Fusionar una rama</td></tr>
+                            <tr><td><code>git log --oneline</code></td><td>Ver historial resumido</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- "modal-footer" tiene los botones de acción del modal -->
+                <div class="modal-footer">
+                    <!-- "data-bs-dismiss='modal'" también cierra el modal desde el footer -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /modal -->
+
+
+    <!-- =====================================================
+         CONSIGNA 4 - BONUS: TOAST (Notificación flotante)
+         Los toasts se posicionan con clases de utilidad.
+         "toast-container" agrupa los toasts.
+         "position-fixed bottom-0 end-0 p-3" lo ubica abajo a la derecha.
+         "toast" es el componente base.
+         "align-items-center" alinea el contenido verticalmente.
+         "text-bg-dark border-0" aplica estilo oscuro sin borde.
+    ====================================================== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="miToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <!-- "d-flex" pone el contenido y el botón de cierre en fila -->
+            <div class="d-flex">
+                <!-- "toast-body" es el texto de la notificación -->
+                <div class="toast-body">
+                    <i class="bi bi-check-circle-fill me-2 text-success"></i>
+                    ¡Gracias por usar Git! Recordá hacer commits seguido 😄
+                </div>
+                <!-- "btn-close-white me-2 m-auto" posiciona el X de cierre -->
+                <!-- "data-bs-dismiss='toast'" cierra el toast -->
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    </div><!-- /toast-container -->
+
+
+    <!-- Bootstrap JS Bundle: incluye Popper.js, necesario para modales, tooltips, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =====================================================
+         JAVASCRIPT para activar el Toast
+         Los Toasts no se activan solos con data-bs-toggle,
+         se deben inicializar y mostrar con JavaScript.
+    ====================================================== -->
+    <script>
+        // Buscamos el botón que activa el toast por su id
+        const btnToast = document.getElementById('btnToast');
+
+        // Buscamos el elemento del toast por su id
+        const toastEl = document.getElementById('miToast');
+
+        // Creamos una instancia del Toast de Bootstrap
+        // { delay: 4000 } hace que se cierre automáticamente después de 4 segundos
+        const toast = new bootstrap.Toast(toastEl, { delay: 4000 });
+
+        // Cuando se clickea el botón, mostramos el toast con .show()
+        btnToast.addEventListener('click', () => {
+            toast.show();
+        });
+    </script>
+
+</body>
+</html>
