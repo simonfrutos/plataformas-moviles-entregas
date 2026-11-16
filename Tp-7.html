@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tp-7</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- HEADER / NAV -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark px-3">
+            <div class="container-fluid">
+                <!-- Perfil y Nombre Alumno -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="foto-perfil.jpg" alt="foto de perfil" width="35" height="35" class="rounded-circle bg-secondary">
+                    <span class="fs-6 text-white-50">Alumno</span>
+                </a>
+                
+                <!-- Botón Hamburguesa para Tablet y Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Links de Navegación -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item"><a class="nav-link text-white-50" href="link1">Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="link2">Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="link3">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container my-4">
+
+        <!-- CARRUSEL (Presente en Desktop y Tablet según vistas.PNG) -->
+        <div id="carouselExample" class="carousel slide bg-secondary-subtle rounded mb-5 d-none d-sm-block" style="height: 200px;">
+            <div class="carousel-inner h-100 d-flex align-items-center justify-content-center">
+                <div class="carousel-item active text-center">
+                    <span class="text-muted fs-4">Sección Destacada / Banner</span>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- ARTÍCULO PRINCIPAL -->
+        <section class="text-center my-4 mx-auto" style="max-width: 800px;">
+            <h1 class="display-5 fw-normal text-muted">Artículo</h1>
+            <h4 class="text-muted fw-light mb-4">Subtítulo del artículo</h4>
+
+            <div class="text-start text-muted">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere cum eaque maxime quisquam. Consequuntur explicabo illo voluptatum mollitia nam temporibus laudantium rem quis nesciunt perspiciatis, nemo est ipsa incidunt in quidem ipsum quisquam. Nemo quidem corporis maxime. Ipsa repellendus alias, facere cumque magni beatae laborum illo similique delectus ratione perferendis omnis, velit, tempore nulla. Possimus vero voluptatem recusandae nesciunt earum, eveniet officiis labore nobis sint beatae, vitae consequatur, corporis voluptates inventore itaque?</p>
+            
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et numquam explicabo laborum nihil quisquam ducimus reprehenderit blanditiis velit molestias minus deserunt porro voluptate pariatur unde quibusdam, fuga quia earum illum placeat ipsam. Nobis, quasi! Consequatur laudantium, vero ab assumenda esse quos, et architecto pariatur nulla placeat doloremque porro repudiandae vitae!</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TARJETAS (RESPONSIVE GRID) -->
+        <section class="row g-4 my-5">
+            <!-- Tarjeta 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="bg-secondary-subtle" style="height: 140px;"></div> <!-- Contenedor simulando la imagen gris -->
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Carta</h5>
+                        <p class="card-text text-muted small">Algo de texto en su tarjeta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="bg-secondary-subtle" style="height: 140px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Carta</h5>
+                        <p class="card-text text-muted small">Algo de texto en su tarjeta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="bg-secondary-subtle" style="height: 140px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Carta</h5>
+                        <p class="card-text text-muted small">Algo de texto en su tarjeta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="bg-secondary-subtle" style="height: 140px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Carta</h5>
+                        <p class="card-text text-muted small">Algo de texto en su tarjeta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FAQ (ACCORDION) -->
+        <section class="my-5">
+            <h2 class="text-muted mb-4">FAQ</h2>
+
+            <div class="accordion" id="accordionFAQ">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-primary-subtle text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quibusdam dignissimos nihil dicta voluptate culpa inventore laboriosam, ipsum iure necessitatibus itaque impedit hic magni quaerat! Inventore nesciunt ab odit commodi dolore est quasi nulla quas ipsa expedita tempora ex laudantium beatae eum, at, molestiae illo qui quo, explicabo dolorum quod!
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eaque laboriosam, officiis minus velit in quas repudiandae vero inventore sequi praesentium rem tenetur consectetur aliquid, voluptas sapiente quis reiciendis! Ut soluta odio, molestias officiis amet dolor rem eum aspernatur beatae dolore labore sapiente eligendi sit nostrum dicta rerum nesciunt recusandae.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident soluta blanditiis voluptate, nam ipsa at illo necessitatibus facere itaque quibusdam sit iure ex adipisci vitae molestiae vel dolore nulla.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN FORMULARIO -->
+        <section class="my-5 mx-auto" style="max-width: 900px;">
+            <form action="" class="card p-4 shadow-sm">
+                <!-- Nombre -->
+                <div class="row mb-3 align-items-center">
+                    <label for="nombre" class="col-sm-2 col-form-label text-muted">Nombre</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="row mb-3 align-items-center">
+                    <label for="email" class="col-sm-2 col-form-label text-muted">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su e-mail">
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="row mb-4">
+                    <label for="comentario" class="col-sm-2 col-form-label text-muted">Comentario</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="comentario" name="comentario" rows="3" placeholder="Ingrese un comentario aquí"></textarea>
+                    </div>
+                </div>
+                <!-- Botones alineados a la derecha -->
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="submit" class="btn btn-primary px-4">Enviar</button>
+                    <button type="reset" class="btn btn-outline-secondary px-4">Borrar datos</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white-50 text-center py-3 mt-5">
+        <div class="container d-flex justify-content-between small">
+            <span>Plataformas móviles</span>
+            <span>Alumno</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper (Obligatorio para que funcionen el menú desplegable y los acordeones) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/packages/bootstrap.bundle.min.js"></script>
+</body>
+</html>
